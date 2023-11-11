@@ -1,4 +1,3 @@
-import 'package:flluter_codigo_yuoapp/pages/init_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +9,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'YouApp',
-      debugShowCheckedModeBanner: false,
-      home: InitPage(),
-    );
+    return MaterialApp();
   }
 }
