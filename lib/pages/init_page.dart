@@ -1,3 +1,4 @@
+import 'package:flluter_codigo_yuoapp/pages/home_page.dart';
 import 'package:flluter_codigo_yuoapp/ui/general/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class _InitPageState extends State<InitPage> {
   int _currentIndex = 0;
 
   List<Widget> _pages = [
+    HomePage(),
     Center(child: Text("Principal")),
     Center(child: Text("Short")),
     Center(child: Text("Agregar")),
