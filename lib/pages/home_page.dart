@@ -31,6 +31,20 @@ class HomePage extends StatelessWidget {
                   "Explorer",
                 ),
               ),
+              const SizedBox(
+                height: 32.0,
+                child: VerticalDivider(
+                  color: Colors.white30,
+                  thickness: 1.0,
+                ),
+              ),
+              Column(
+                children: [
+                  Chip(
+                    label: Text("Todos"),
+                  ),
+                ],
+              ),
             ],
           )
         ]),
