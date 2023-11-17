@@ -8,7 +8,7 @@ class ItemVideoWidget extends StatelessWidget {
     double height = MediaQuery.of(context).size.height;
 
     return Container(
-      margin: const EdgeInsets.only(top: 6, bottom: 10.0),
+      margin: const EdgeInsets.only(bottom: 10.0),
       child: Column(
         children: [
           Stack(
@@ -57,6 +57,8 @@ class ItemVideoWidget extends StatelessWidget {
             ),
             subtitle: Text(
               "alanxelmundo · 7.6 M de vistas · hace 3 años",
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
                 color: Colors.white54,
                 fontSize: 13.0,
