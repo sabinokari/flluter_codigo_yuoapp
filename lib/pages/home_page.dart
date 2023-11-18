@@ -1,13 +1,17 @@
+import 'package:flluter_codigo_yuoapp/services/api_service.dart';
 import 'package:flluter_codigo_yuoapp/ui/general/colors.dart';
 import 'package:flluter_codigo_yuoapp/ui/widgets/item_filter_widget.dart';
 import 'package:flluter_codigo_yuoapp/ui/widgets/item_video_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final APIService _apiService = APIService();
+  //const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    _apiService.getVideos();
+
     return SingleChildScrollView(
       child: Padding(
         padding: EdgeInsets.symmetric(

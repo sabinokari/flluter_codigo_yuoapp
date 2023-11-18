@@ -19,7 +19,7 @@ class ItemFilterWidget extends StatelessWidget {
         labelStyle: TextStyle(
           color: isSelected ? kBrandPrimaryColor : Colors.white,
         ),
-        label: Text("text"),
+        label: Text(text),
       ),
     );
   }
