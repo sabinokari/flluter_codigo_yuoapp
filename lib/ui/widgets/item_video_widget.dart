@@ -1,7 +1,9 @@
+import 'package:flluter_codigo_yuoapp/models/video_model.dart';
 import 'package:flutter/material.dart';
 
 class ItemVideoWidget extends StatelessWidget {
-  const ItemVideoWidget({Key? key}) : super(key: key);
+  VideoModel videoModel;
+  ItemVideoWidget({required this.videoModel});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class ItemVideoWidget extends StatelessWidget {
           Stack(
             children: [
               Image.network(
-                "https://images.pexels.com/photos/1097768/pexels-photo-1097768.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                videoModel.snippet.thumbnails.high.url,
                 width: double.infinity,
                 height: height * 0.3,
                 fit: BoxFit.cover,
@@ -47,7 +49,7 @@ class ItemVideoWidget extends StatelessWidget {
               ),
             ),
             title: Text(
-              "Lorem ipsun dolors sit amet ",
+              videoModel.snippet.title,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
@@ -56,7 +58,7 @@ class ItemVideoWidget extends StatelessWidget {
               ),
             ),
             subtitle: Text(
-              "alanxelmundo · 7.6 M de vistas · hace 3 años",
+              "${videoModel.snippet.channelTitle} · 7.6 M de vistas · hace 3 años",
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
