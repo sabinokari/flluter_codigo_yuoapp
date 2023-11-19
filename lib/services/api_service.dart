@@ -19,4 +19,6 @@ class APIService {
     }
     return videosModel;
   }
+
+  getChannel() {}
 }
