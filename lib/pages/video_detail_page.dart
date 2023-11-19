@@ -65,12 +65,92 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
             color: Colors.white,
           ),
         ),
-        Row(
-          children: [
-            ItemVideoDetailWidget(),
-            ItemVideoDetailWidget(),
-            ItemVideoDetailWidget(),
-          ],
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ItemVideoDetailWidget(
+                  text: "53 K",
+                  icon: Icons.thumb_up_alt_outlined,
+                ),
+                ItemVideoDetailWidget(
+                  text: "No me gusta",
+                  icon: Icons.thumb_down_alt_outlined,
+                ),
+                ItemVideoDetailWidget(
+                  text: "Compartir",
+                  icon: Icons.share,
+                ),
+                ItemVideoDetailWidget(
+                  text: "Crear",
+                  icon: Icons.play_arrow_rounded,
+                ),
+                ItemVideoDetailWidget(
+                  text: "Descargar",
+                  icon: Icons.download_rounded,
+                ),
+                ItemVideoDetailWidget(
+                  text: "Compartir",
+                  icon: Icons.share,
+                ),
+                ItemVideoDetailWidget(
+                  text: "Crear",
+                  icon: Icons.play_arrow_rounded,
+                ),
+                ItemVideoDetailWidget(
+                  text: "Descargar",
+                  icon: Icons.download_rounded,
+                ),
+              ],
+            ),
+          ),
+        ),
+        Divider(
+          color: Colors.white24,
+        ),
+        ListTile(
+          leading: CircleAvatar(
+            backgroundColor: Colors.white24,
+            backgroundImage: NetworkImage(
+              "https://images.pexels.com/photos/2608519/pexels-photo-2608519.jpeg?auto=compress&cs=tinysrgb&w=600",
+            ),
+          ),
+          title: Text(
+            "Lorem ipsum dolor sit amet",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 14.0,
+            ),
+          ),
+          subtitle: Text(
+            "1.43 M Subcriptores",
+            style: TextStyle(
+              color: Colors.white70,
+              fontSize: 12.0,
+            ),
+          ),
+          trailing: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text(
+                "SUSCRITO",
+                style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 14.0,
+                ),
+              ),
+              SizedBox(
+                width: 6.0,
+              ),
+              Icon(
+                Icons.notifications_none,
+                color: Colors.white70,
+              ),
+            ],
+          ),
         ),
       ]),
     );
