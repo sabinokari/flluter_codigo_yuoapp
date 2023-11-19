@@ -1,4 +1,5 @@
 import 'package:flluter_codigo_yuoapp/ui/general/colors.dart';
+import 'package:flluter_codigo_yuoapp/ui/widgets/item_video_detail_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
@@ -47,7 +48,30 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
               backgroundColor: Colors.white.withOpacity(0.1),
             ),
           ),
-        )
+        ),
+        ListTile(
+          title: Text(
+            "Lorem ipsum dolor sit amet",
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(height: 1.3, color: Colors.white, fontSize: 14.0),
+          ),
+          subtitle: Text(
+            "6.5 M de vistas · hace 2 años",
+            style: TextStyle(color: Colors.white54, fontSize: 13.0),
+          ),
+          trailing: Icon(
+            Icons.keyboard_arrow_down,
+            color: Colors.white,
+          ),
+        ),
+        Row(
+          children: [
+            ItemVideoDetailWidget(),
+            ItemVideoDetailWidget(),
+            ItemVideoDetailWidget(),
+          ],
+        ),
       ]),
     );
   }
