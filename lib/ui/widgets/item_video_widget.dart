@@ -16,7 +16,9 @@ class ItemVideoWidget extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => VideoDetailPage(),
+            builder: (context) => VideoDetailPage(
+              videoId: videoModel.id.videoId,
+            ),
           ),
         );
       },

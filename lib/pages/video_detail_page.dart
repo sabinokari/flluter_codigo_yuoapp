@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class VideoDetailPage extends StatefulWidget {
-  const VideoDetailPage({Key? key}) : super(key: key);
+  String videoId;
+  VideoDetailPage({
+    required this.videoId,
+  });
 
   @override
   State<VideoDetailPage> createState() => _VideoDetailPageState();
@@ -17,7 +20,7 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
     // TODO: implement initState
     super.initState();
     _playerController = YoutubePlayerController(
-      initialVideoId: "7G3UJtyq794",
+      initialVideoId: widget.videoId,
       flags: YoutubePlayerFlags(
         autoPlay: true,
         mute: false,
@@ -37,6 +40,12 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
           height: height * 0.35,
           child: YoutubePlayer(
             controller: _playerController,
+            progressColors: ProgressBarColors(
+              playedColor: Colors.red,
+              handleColor: Colors.red,
+              bufferedColor: Colors.white54,
+              backgroundColor: Colors.white.withOpacity(0.1),
+            ),
           ),
         )
       ]),
