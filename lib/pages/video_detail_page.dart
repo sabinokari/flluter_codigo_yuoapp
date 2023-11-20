@@ -1,3 +1,4 @@
+import 'package:flluter_codigo_yuoapp/pages/channel_page.dart';
 import 'package:flluter_codigo_yuoapp/ui/general/colors.dart';
 import 'package:flluter_codigo_yuoapp/ui/widgets/item_video_detail_widget.dart';
 import 'package:flutter/material.dart';
@@ -115,6 +116,14 @@ class _VideoDetailPageState extends State<VideoDetailPage> {
                 color: Colors.white24,
               ),
               ListTile(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ChannelPage(),
+                    ),
+                  );
+                },
                 leading: CircleAvatar(
                   backgroundColor: Colors.white24,
                   backgroundImage: NetworkImage(
